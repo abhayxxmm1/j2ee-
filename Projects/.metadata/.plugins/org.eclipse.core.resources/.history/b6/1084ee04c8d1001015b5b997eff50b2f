@@ -1,0 +1,8 @@
+package inventorymanagement;
+
+import jakarta.servlet.annotation.WebServlet;
+
+@WebServlet("login")
+public class LoginServlet {
+
+}

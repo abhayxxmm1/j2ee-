@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="box">
+            <h2>Create Account</h2>
+
+            <form>
+                <div class="inputBox">
+                    <input type="text" required>
+                    <span>Name</span>
+                </div>
+
+                <div class="inputBox">
+                    <input type="email" required>
+                    <span>Email</span>
+                </div>
+
+                <div class="inputBox">
+                    <input type="tel" required>
+                    <span>Mobile Number</span>
+                </div>
+
+                <div class="inputBox">
+                    <input type="password" required>
+                    <span>Password</span>
+                </div>
+
+                <div class="inputBox">
+                    <input type="password" required>
+                    <span>Confirm Password</span>
+                </div>
+
+                <div class="links">
+                    <a href="index.html">Already have an account?</a>
+                </div>
+
+                <input type="submit" value="Register" class="btn">
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

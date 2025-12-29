@@ -1,0 +1,75 @@
+package inventorymanagement;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+@WebServlet("register")
+public class RegistrationPage extends HttpServlet {
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		PrintWriter pw=resp.getWriter();
+		String name=req.getParameter("uname");
+		String email=req.getParameter("uemail");
+		long telno=Long.parseLong(req.getParameter("utel"));
+		String upass=req.getParameter("upass");
+		String ucpass=req.getParameter("ucpass");
+		
+		if (!name.equals(null)) {
+			
+			if (!email.equals(null)) {
+				
+				if (telno==10) {
+					
+					if (!upass.equals(null)) {
+						
+						
+						if (!ucpass.equals(null)) {
+							
+							
+							if (upass.equals(ucpass)) {
+								
+								
+								
+								
+								
+								
+							} else {
+								pw.print("<script>alert('Enter a Confirm Password Does Not Match For above given password')<script>");
+							}
+							
+							
+							
+							
+						} else {
+							
+							pw.print("<script>alert('Enter a Confirm Password')<script>");
+						}
+						
+						
+						
+					} else {
+						pw.print("<script>alert('Enter a Correct Password')<script>");
+					}
+					
+				} else {
+					pw.print("<script>alert('Enter a Valid 10 Digit Phone No')<script>");
+				}
+				
+			} else {
+				pw.print("<script>alert('Enter a Email')<script>");
+			}
+			
+		} else {
+			pw.print("<script>alert('Enter a Name')<script>");
+		}
+		
+	}
+	
+}

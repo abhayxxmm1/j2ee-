@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    animation: bgMove 8s infinite alternate;
+}
+
+@keyframes bgMove {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(40deg); }
+}
+
+.container {
+    width: 350px;
+}
+
+.box {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+    animation: slideUp 1s ease forwards;
+    transform: translateY(40px);
+    opacity: 0;
+}
+
+@keyframes slideUp {
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+h2 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.inputBox {
+    position: relative;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.inputBox input {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    outline: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 10px 0;
+    color: #e0e0e0;
+    pointer-events: none;
+    transition: 0.4s;
+}
+
+.inputBox input:focus ~ span,
+.inputBox input:valid ~ span {
+    transform: translateY(-18px);
+    font-size: 12px;
+    color: #00ffe7;
+}
+
+.inputBox input:focus {
+    border-bottom-color: #00ffe7;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    margin: -10px 0 20px;
+}
+
+.links a {
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.links a:hover {
+    color: #00ffe7;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background: #00e6ff;
+    border: none;
+    border-radius: 25px;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background: #fff;
+    transform: scale(1.05);
+}

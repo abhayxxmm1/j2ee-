@@ -1,0 +1,29 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+    String u = request.getParameter("names");
+    String p = request.getParameter("pass");
+
+    if (u != null && p != null) {
+        if (u.equals("XYZ") && p.equals("123")) {
+%>
+            <h1>Login Successful...</h1>
+<%
+        } else {
+%>
+            <h1>Login Failed...</h1>
+            <jsp:include page="Login.jsp" />
+<%
+        }
+    }
+%>
+
+</body>
+</html>
