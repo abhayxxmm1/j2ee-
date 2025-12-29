@@ -1,0 +1,212 @@
+package com.jsp.hqlDms.driver;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+
+import com.jsp.hqlDms.entity.Developer;
+
+public class DeveloperDriver {
+
+	public static void main(String[] args) {
+		
+		int objNo=5;
+		
+		EntityManager em = Persistence.createEntityManagerFactory("pg").createEntityManager();
+		EntityTransaction et = em.getTransaction();
+
+		Developer d1 = new Developer(101, "Abhay", 20000000.0, "Male", "JavaFullStack");
+		Developer d2 = new Developer(102, "Abhijeet", 20500000.0, "Male", "JavaFullStack");
+		Developer d3 = new Developer(103, "Amit", 3000000.0, "Male", "JavaFullStack");
+		Developer d4 = new Developer(104, "Chinmay", 4000000.0, "Male", "JavaFullStack");
+		Developer d5 = new Developer(105, "Omkar", 5000000.0, "Male", "JavaFullStack");
+		
+
+		et.begin();
+//		em.persist(d1);
+//		em.persist(d2);
+//		em.persist(d3);
+//		em.persist(d4);
+//		em.persist(d5);
+		et.commit();
+		
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("welcome to Profile Portal ");
+		boolean b=true;
+		while (b) {
+			System.out.println("Enter a Choice in No:");
+			System.out.println("///1] insert new Developer Data");
+			System.out.println("///2] Update Developer name by id");
+			System.out.println("///3) Update Develope gender by id");
+			System.out.println("///4) Update Developes Salary by id");
+			System.out.println("///5) Update Developer name and genver byid");
+			System.out.println("///6) delete All Developes Data");
+			System.out.println("///7) delete one Developer data");
+			System.out.println("///8) display All Developer Data ");
+			System.out.println("///9) display one Developer data");
+			System.out.println("///10] Exit");
+			
+			int choose = sc.nextInt();
+			switch (choose) {
+			case 1:
+				
+				String dt="d"+objNo++;
+				System.out.println("Enter id:");
+				int id = sc.nextInt();
+//				Developer dev = em.find(Developer.class, id);
+//				
+//				if (dev.getId()!=id) {
+					System.out.println("Enter name:");
+					String name = sc.next();
+					System.out.println("Enter sal:");
+					double sal = sc.nextDouble();
+					System.out.println("Enter gender");
+					String gender = sc.next();
+					System.out.println("Enter skills");
+					String skills = sc.next();
+					
+					Developer developer = new Developer(id, name, sal, gender, skills);
+					et.begin();
+					em.persist(developer);
+					et.commit();
+					
+//				}else {
+//					System.err.println("user " +id+ " already present! ");
+//					break;
+//				}
+				
+				break;
+			case 2: 
+				et.begin();
+				Query query = em.createQuery("update Developer set name=:name where id=:id");
+				System.out.println("Enter Name to be Updated :");
+				query.setParameter("name", sc.next());
+				System.out.println("Enter Id :");
+				query.setParameter("id", sc.nextInt());
+				query.executeUpdate();
+				et.commit();
+				System.out.println("/// Changes Saved");
+				break;
+			case 3:
+				et.begin();
+				Query query2 = em.createQuery("update Developer set gender=:name where id=:id");
+				System.out.println("Enter Gender to be Updated :");
+//				String gen=sc.next();
+//				if (gen.equals("male")||gen.equals("female")||gen.equals("others")) {
+//					
+//					query2.setParameter("name", gen);
+//				}else  {
+//					System.err.println("Enter a Valid gender");
+//					}
+				
+				query2.setParameter("name", sc.next());
+				System.out.println("Enter Id :");
+				query2.setParameter("id", sc.nextInt());
+				query2.executeUpdate();
+				et.commit();
+				System.out.println("/// Changes Saved");
+				break;
+			case 4:
+				et.begin();
+				Query query3 = em.createQuery("update Developer set salary=:name where id=:id");
+				System.out.println("Enter sal to be Updated :");
+				query3.setParameter("name", sc.nextDouble());
+				System.out.println("Enter Id :");
+				query3.setParameter("id", sc.nextInt());
+				query3.executeUpdate();
+				et.commit();
+				System.out.println("/// Changes Saved");
+				break;
+			case 5:
+				et.begin();
+				Query query4 = em.createQuery("update Developer set name= :name, salary= :sal where id= :id");
+				System.out.println("Enter name to be Updated :");
+				query4.setParameter("name", sc.next());
+				System.out.println("Enter sal to be Updated :");
+				query4.setParameter("sal", sc.nextDouble());
+				System.out.println("Enter Id :");
+				query4.setParameter("id", sc.nextInt());
+				query4.executeUpdate();
+				et.commit();
+				System.out.println("/// Changes Saved");
+				break;
+			case 6:
+//				et.begin();
+//				Query query6 = em.createQuery("from Developer");
+//				List<Developer> l1=query6.getResultList();
+//				l1.forEach(null)
+//				Developer dev1 = em.find(Developer.class, );
+//				while (dev1!=null) {
+//				em.createQuery("Delete from Developer where id=:id");
+//					
+//				}
+//				et.commit();
+/*************************************************************************************************************/
+//				et.begin();
+//				List<Developer> l1 = em.createQuery("FROM Developer", Developer.class).getResultList();
+//				for (Developer dev1 : l1) {
+//				    em.remove(dev1);       // dev1 is managed because it came from a query
+//				}
+//				et.commit();
+/*************************************************************************************************************/
+				et.begin();
+//				Query query6 = em.createQuery("DELETE FROM Developer").executeUpdate();
+				Query query6 = em.createQuery("DELETE FROM Developer");				
+				et.commit();
+
+				System.out.println("Deleted " + query6 + " developers");
+				break;
+			case 7:
+				et.begin();
+				Query query7 = em.createQuery("Delete from Developer where id= :id");
+				System.out.println("Enter Id :");
+				query7.setParameter("id", sc.nextInt());
+				query7.executeUpdate();
+				et.commit();
+				System.out.println("/// User Deleted Succesfully");
+				break;
+			case 8:
+				Query query8 = em.createQuery("from Developer");
+				List<Developer> list= query8.getResultList();
+				list.forEach(System.out::println);
+				break;
+			case 9:
+				et.begin();
+				Query query9 = em.createQuery("from Developer where id=:id");
+				System.out.println("Enter Id :");
+				query9.setParameter("id", sc.nextInt());
+				Object singleResult = query9.getSingleResult();
+				System.out.println(singleResult);
+				et.commit();
+				break;
+			case 10:
+				System.out.println("Are you sure for Exit ");
+				System.out.println("Enter y for yes or n for no: ");
+				String yn=sc.next();
+				
+				if (yn.equals("y")) {
+					b=false;
+					break;
+				}
+				break;
+			default:
+				System.out.println("Enter a Valid Choice");
+				break;
+			}
+			
+		}
+		
+		
+
+		
+		
+		
+	}
+}

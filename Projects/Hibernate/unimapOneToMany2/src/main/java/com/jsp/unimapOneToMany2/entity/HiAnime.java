@@ -1,0 +1,63 @@
+package com.jsp.unimapOneToMany2.entity;
+
+import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+@Entity
+public class HiAnime {
+
+	@Id
+	private int id;
+	private String name;
+	private String season;
+	
+	@OneToMany
+	List<Anime> animes;
+
+	public HiAnime() {
+	}
+
+	public HiAnime(int id, String name, String season, List<Anime> animes) {
+		this.id = id;
+		this.name = name;
+		this.season = season;
+		this.animes = animes;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getSeason() {
+		return season;
+	}
+
+	public void setSeason(String season) {
+		this.season = season;
+	}
+
+	public List<Anime> getAnimes() {
+		return animes;
+	}
+
+	public void setAnimes(List<Anime> animes) {
+		this.animes = animes;
+	}
+	
+	
+}

@@ -1,0 +1,249 @@
+/* Basic reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root{
+  --bg: #f4f7fb;
+  --card: #ffffff;
+  --accent: #4f46e5;        /* indigo */
+  --muted: #6b7280;         /* gray */
+  --danger: #ef4444;
+  --radius: 12px;
+}
+
+body{
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, #eef2ff 0%, var(--bg) 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  color: #111827;
+  animation: fadeInBody 1s ease forwards;
+}
+
+@keyframes fadeInBody {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.container{
+  width: 100%;
+  max-width: 920px;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 28px;
+  align-items: stretch;
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Left panel (illustration + text) */
+.hero{
+  background: linear-gradient(180deg, rgba(79,70,229,0.06), rgba(99,102,241,0.02));
+  border-radius: var(--radius);
+  padding: 36px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:18px;
+  box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+  animation: fadeInLeft 1s ease forwards;
+  animation-delay: 0.6s;
+  opacity: 0;
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.hero h1{
+  font-size: 28px;
+  line-height: 1.05;
+  color: #0f172a;
+}
+.hero p{
+  color: var(--muted);
+  font-size: 15px;
+  max-width: 48ch;
+}
+.features{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:6px;
+}
+.feature{
+  background: rgba(99,102,241,0.08);
+  padding:10px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #312e81;
+}
+
+/* Signup card */
+.card{
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 26px;
+  box-shadow: 0 8px 28px rgba(15,23,42,0.06);
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  animation: fadeInRight 1s ease forwards;
+  animation-delay: 0.9s;
+  opacity: 0;
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.card h2{
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+.card p.lead{
+  color: var(--muted);
+  font-size: 13px;
+}
+
+form {
+  display: grid;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+label{
+  display:block;
+  font-size: 13px;
+  margin-bottom:6px;
+  color: #111827;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #e6e9ef;
+  background: #fff;
+  font-size: 14px;
+  outline: none;
+  transition: border-color .15s, box-shadow .15s;
+}
+
+input:focus, select:focus{
+  border-color: var(--accent);
+  box-shadow: 0 6px 18px rgba(99,102,241,0.12);
+}
+
+.small{
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.inline{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  font-size: 14px;
+}
+
+.terms{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.btn {
+  display:inline-block;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, var(--accent), #8b5cf6);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  text-align:center;
+  transition: background-color 0.3s ease, filter 0.3s ease;
+  will-change: transform;
+}
+
+.btn:hover:not([disabled]){
+  background: linear-gradient(90deg, #7c3aed, #a78bfa);
+  filter: brightness(1.1);
+  transform: scale(1.05);
+}
+
+.btn[disabled]{
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.muted-link{
+  font-size:13px;
+  color:var(--muted);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.muted-link:hover{
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.help {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* validation hint */
+.hint {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* small screens */
+@media (max-width: 880px){
+  .container{ grid-template-columns: 1fr; }
+  .row { grid-template-columns: 1fr; }
+  .hero{ order: 2; padding: 22px; text-align:center; }
+}

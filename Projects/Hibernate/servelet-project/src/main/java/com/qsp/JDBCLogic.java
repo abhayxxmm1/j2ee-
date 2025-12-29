@@ -1,0 +1,67 @@
+package com.qsp;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class JDBCLogic {
+
+	private static String URL = "jdbc:postgresql://localhost:5432/resgister";
+	private static String user = "postgres";
+	private static String pass = "root";
+	private static Connection con;
+	
+	static {
+		try {
+			Class.forName("org.postgresql.Driver");
+			con = DriverManager.getConnection(URL,user,pass);
+
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace(); 
+		}
+	}
+	
+	
+	
+	public void save(String user, String password) {
+		try {
+			PreparedStatement ps = con.prepareStatement("insert into rup values(?,?)");
+			ps.setString(1, user);
+			ps.setString(2, password);
+			
+			ps.execute();
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public boolean login(String user, String password) {
+		try {
+			PreparedStatement ps = con.prepareStatement("select * from rup where username=? and password=?");
+			ps.setString(1, user);
+			ps.setString(2, password);
+			
+			ResultSet rs=ps.executeQuery();
+			
+			if (rs.next()) {
+				return true;
+			}
+			
+			ps.execute();
+
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
+	}
+	
+	
+}
+

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sign Up with Animation</title>
+  <link rel="stylesheet" href="signup.css" />
+</head>
+<body>
+  <main class="container" role="main">
+    <section class="hero" aria-hidden="false">
+      <h1>Create your account</h1>
+      <p>Join our community to get access to exclusive tools, learning resources and personalised updates. Secure sign up with minimal steps.</p>
+
+      <div class="features" aria-hidden="true">
+        <span class="feature">Secure sign-in</span>
+        <span class="feature">Easy profile setup</span>
+        <span class="feature">Email verification</span>
+      </div>
+
+      <p class="help">Already have an account? <a href="#" class="muted-link">Log in</a></p>
+    </section>
+
+    <section class="card" aria-labelledby="signup-heading">
+      <h2 id="signup-heading">Sign up</h2>
+      <p class="lead">Fill the form below to create your account. Fields marked with * are required.</p>
+
+      <form action="#" method="post" novalidate>
+        <div class="row">
+          <div>
+            <label for="firstName">First name *</label>
+            <input id="firstName" name="firstName" type="text" placeholder="John" required autocomplete="given-name" />
+          </div>
+          <div>
+            <label for="lastName">Last name *</label>
+            <input id="lastName" name="lastName" type="text" placeholder="Doe" required autocomplete="family-name" />
+          </div>
+        </div>
+
+        <div>
+          <label for="email">Email address *</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required autocomplete="email" />
+          <div class="hint">We'll send a confirmation email to this address.</div>
+        </div>
+
+        <div class="row">
+          <div>
+            <label for="password">Password *</label>
+            <input id="password" name="password" type="password" placeholder="Choose a strong password" minlength="8" required autocomplete="new-password" />
+            <div class="hint">Minimum 8 characters.</div>
+          </div>
+
+          <div>
+            <label for="confirmPassword">Confirm password *</label>
+            <input id="confirmPassword" name="confirmPassword" type="password" placeholder="Re-enter password" minlength="8" required autocomplete="new-password" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" placeholder="+91 9876543210" pattern="^\+?[0-9\s\-]{7,20}$" autocomplete="tel" />
+            <div class="hint">Optional — include country code if available.</div>
+          </div>
+
+          <div>
+            <label for="dob">Date of birth</label>
+            <input id="dob" name="dob" type="date" />
+          </div>
+        </div>
+
+        <div>
+          <label for="role">Account type</label>
+          <select id="role" name="role" aria-label="Account type">
+            <option value="student">Student</option>
+            <option value="professional">Professional</option>
+            <option value="instructor">Instructor</option>
+          </select>
+        </div>
+
+        <div class="terms">
+          <input id="agree" name="agree" type="checkbox" required />
+          <label for="agree" class="small">I agree to the <a href="#" class="muted-link">Terms &amp; Conditions</a> and <a href="#" class="muted-link">Privacy Policy</a> *</label>
+        </div>
+
+        <div class="form-footer" style="display:flex;gap:10px;align-items:center;margin-top:8px;">
+          <button class="btn" type="submit">Create account</button>
+          <div class="small muted-link">or continue with</div>
+        </div>
+
+        <p class="small" style="margin-top:6px;">
+          By creating an account you agree to our terms. You can always delete your account later.
+        </p>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
