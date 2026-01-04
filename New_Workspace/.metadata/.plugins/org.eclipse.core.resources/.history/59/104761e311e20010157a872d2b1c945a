@@ -1,0 +1,5 @@
+package com.jsp.hql.driver;
+
+public class MobileDriverPositionParameter {
+
+}

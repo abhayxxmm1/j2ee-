@@ -1,0 +1,284 @@
+package com.jsp.hqlAssignment.driver;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+
+import com.jsp.hqlAssignment.entity.Developer;
+
+public class DeveloperDriver {
+
+	public static void main(String[] args) {
+		///welcome to Profile Postal 
+		///insert new Developer Data
+		///2] Update Developer name by id
+		///3) Update Develope gender by id
+		///4) Update Developes Salary by id
+		///S) Update Developer namefgenver byid
+		///6) delete All Developes Data
+		///7) delete one Developer da-la
+		///8)display All Developer Data 
+		///9)display one Developer data
+		///10] Exit
+
+		int objNo=5;
+		
+		EntityManager em = Persistence.createEntityManagerFactory("pg").createEntityManager();
+		EntityTransaction et = em.getTransaction();
+
+		Developer d1 = new Developer(101, "Abhay", 20000000.0, "Male", "JavaFullStack");
+		Developer d2 = new Developer(102, "Abhijeet", 20500000.0, "Male", "JavaFullStack");
+		Developer d3 = new Developer(103, "Amit", 3000000.0, "Male", "JavaFullStack");
+		Developer d4 = new Developer(104, "Chinmay", 4000000.0, "Male", "JavaFullStack");
+		Developer d5 = new Developer(105, "Omkar", 5000000.0, "Male", "JavaFullStack");
+		
+		/**
+		public static void main(String[] args) {
+		Product p=new Product();
+		try {
+			boolean b=true;
+			while (b) {
+				System.out.println("Enter a Choice in Nos: 1.Insert 2.Update 3.Delete 4.Fetch By Id  5.Fetch By Price  6.Fetch All ");
+				int choice=sc.nextInt();
+				switch (choice) {
+				case 1:
+					p.insertProduct();
+					break;
+				case 2: 
+					p.updateProductPrice();
+					break;
+				case 3:
+					p.deletePrice();
+				case 4:
+					p.fetchById();
+					break;
+				case 5:
+					p.fetchByPrice();
+					break;
+				case 6:
+					p.fetchAll();
+					break;
+				default:
+					System.out.println("Enter a Valid Choice");
+					break;
+				}
+				System.out.println("Enter 1 For Contiue and 2 for Exit");
+				int ch=sc.nextInt();
+				if (ch==2) {
+					break;
+				}
+				
+			}
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+			// TODO: handle exception
+		}
+	}
+	
+
+	@Override
+	public void insertProduct() throws Exception {
+		System.out.println("Enter a Id,Name,Price For Insertion: ");
+		int i1=sc.nextInt();
+		String i2=sc.next();
+		double i3=sc.nextDouble();
+		CallableStatement cs=c.prepareCall("call insert_product(?,?,?)");
+		cs.setInt(1, i1);
+		cs.setString(2, i2);
+		cs.setDouble(3, i3);
+		cs.execute();
+		System.out.println("Data is insertedd.......");
+	}
+
+	@Override
+	public void updateProductPrice() throws Exception {
+		// TODO Auto-generated method stub
+		System.out.println("Enter a Id,Price For Updation: ");
+		int i1=sc.nextInt();
+		double i2=sc.nextDouble();		
+		PreparedStatement s=c.prepareStatement("update product set price=? where id=?");
+		s.setDouble(1, i2);
+		s.setInt(2,i1);
+		s.execute();
+		System.out.println("Data is Updated...........");
+	
+		
+	}
+
+	@Override
+	public void deletePrice() throws Exception {
+		// TODO Auto-generated method stub
+		System.out.println("Enter a Price For Deletion: ");
+		double i2=sc.nextDouble();		
+		PreparedStatement s=c.prepareStatement("delete from product where price=?");
+		s.setDouble(1, i2);
+		s.execute();
+		System.out.println("Data is Deletedd...........");
+		
+	}
+
+	@Override
+	public void fetchById() throws Exception {
+		// TODO Auto-generated method stub
+		
+		Statement s=c.createStatement();
+		System.out.println("Enter a Id fro the Fetching........: ");
+		int id=sc.nextInt();
+		String query="select * from product where id="+id;
+		ResultSet rs=s.executeQuery(query);
+		while (rs.next()) {
+			System.out.println("Id:"+rs.getInt(1)+" Name:"+rs.getString(2)+" Price:"+rs.getDouble(3));
+		}
+		
+		
+	}
+
+	@Override
+	public void fetchByPrice() throws Exception {
+		// TODO Auto-generated method stub
+		
+		Statement s=c.createStatement();
+		System.out.println("Enter a Price fro the Fetching........: ");
+		double id=sc.nextDouble();
+		String query="select * from product where price="+id;
+		ResultSet rs=s.executeQuery(query);
+		while (rs.next()) {
+			System.out.println("Id: "+rs.getInt(1)+" Name:"+rs.getString(2)+" Price:"+rs.getDouble(3));
+		}
+		
+	}
+
+	@Override
+	public void fetchAll() throws Exception {
+		// TODO Auto-generated method stub
+		
+		Statement s=c.createStatement();
+		String query="select * from product";
+		ResultSet rs=s.executeQuery(query);
+		while (rs.next()) {
+			System.out.println("Id: "+rs.getInt(1)+" Name: "+rs.getString(2)+" Price: "+rs.getDouble(3));
+		}
+		
+	}
+		 */
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("welcome to Profile Portal ");
+		boolean b=true;
+		while (b) {
+			System.out.println("Enter a Choice in Nos:");
+			System.out.println("///1] insert new Developer Data");
+			System.out.println("///2] Update Developer name by id");
+			System.out.println("///3) Update Develope gender by id");
+			System.out.println("///4) Update Developes Salary by id");
+			System.out.println("///5) Update Developer namefgenver byid");
+			System.out.println("///6) delete All Developes Data");
+			System.out.println("///7) delete one Developer data");
+			System.out.println("///8) display All Developer Data ");
+			System.out.println("///9) display one Developer data");
+			System.out.println("///10] Exit");
+			
+			int choose = sc.nextInt();
+			switch (choose) {
+			case 1:
+				
+				String dt="d"+objNo++;
+				System.out.println("Enter id:");
+				int id = sc.nextInt();
+				Developer dev = em.find(Developer.class, id);
+				
+				if (dev.getId()!=id) {
+					System.out.println("Enter name:");
+					String name = sc.next();
+					System.out.println("Enter sal:");
+					double sal = sc.nextDouble();
+					System.out.println("Enter gender");
+					String gender = sc.next();
+					System.out.println("Enter skills");
+					String skills = sc.next();
+					
+//					Developer dt = new Developer(id, name, sal, gender, skills);
+					
+				}else {
+					System.err.println("user " +id+ " already present! ");
+					break;
+				}
+				
+				break;
+			case 2: 
+				et.begin();
+				Query query = em.createQuery("update Developer set name=:name where id=:id");
+				System.out.println("Enter Name to be Updated :");
+				query.setParameter("name", sc.next());
+				System.out.println("Enter Id :");
+				query.setParameter("id", sc.nextInt());
+				query.executeUpdate();
+				et.commit();
+				break;
+			case 3:
+				et.begin();
+				Query query2 = em.createQuery("update Developer set gender=:name where id=:id");
+				System.out.println("Enter Gender to be Updated :");
+				query2.setParameter("name", sc.next());
+				System.out.println("Enter Id :");
+				query2.setParameter("id", sc.nextInt());
+				query2.executeUpdate();
+				et.commit();
+				break;
+			case 4:
+
+				break;
+			case 5:
+
+				break;
+			case 6:
+
+				break;
+			case 7:
+				
+				break;
+			case 8:
+				
+				break;
+			case 9:
+				
+				break;
+			case 10:
+				System.out.println("Are you sure for Exit ");
+				System.out.println("Enter y for yes or n for no: ");
+				String yn=sc.next();
+				
+				if (yn.equals("y")) {
+					b=false;
+					break;
+				}
+				break;
+			default:
+				System.out.println("Enter a Valid Choice");
+				break;
+			}
+			
+		}
+		et.begin();
+//		em.persist(d1);
+//		em.persist(d2);
+//		em.persist(d3);
+//		em.persist(d4);
+//		em.persist(d5);
+		
+//		em.createQuery("update Developer set name=:name where id=:id");
+		et.commit();
+		
+		
+
+		
+		
+		
+	}
+}

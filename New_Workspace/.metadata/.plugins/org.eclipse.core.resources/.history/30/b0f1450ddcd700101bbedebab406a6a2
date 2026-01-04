@@ -1,0 +1,19 @@
+package hibernate;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+public class FetchCar {
+
+	public static void main(String[] args) {
+		
+		EntityManagerFactory emf= Persistence.createEntityManagerFactory("pg");
+		EntityManager em=emf.createEntityManager();
+		
+		Car c1=em.find(Car.class, 10);
+		System.out.println(c1.getId());
+		System.out.println(c1.getBrand());
+		System.out.println(c1.getPrice());
+	}
+}

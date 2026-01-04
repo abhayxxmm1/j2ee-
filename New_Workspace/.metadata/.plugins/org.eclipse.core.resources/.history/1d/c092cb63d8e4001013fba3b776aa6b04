@@ -1,0 +1,15 @@
+package com.jsp.designPattern.entity;
+
+public class Student {
+
+	private static Student stu=new Student();
+	
+	private Student() {
+		System.out.println("From object of studnt");
+	}
+	
+	public static Student getObj(){
+		return stu;
+	}
+	
+}

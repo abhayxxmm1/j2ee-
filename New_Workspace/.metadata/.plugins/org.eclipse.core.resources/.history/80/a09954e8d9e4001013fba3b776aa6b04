@@ -1,0 +1,5 @@
+package com.jsp.designPattern.entity;
+
+public class Developer {
+
+}

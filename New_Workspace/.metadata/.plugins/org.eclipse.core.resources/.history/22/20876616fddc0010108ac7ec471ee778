@@ -1,0 +1,65 @@
+package com.jsp.bimapManyToMany.driver;
+
+import java.util.Arrays;
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+import com.jsp.bimapManyToMany.*;
+import com.jsp.bimapManyToMany.entity.Manager;
+import com.jsp.bimapManyToMany.entity.TeamLead;
+
+public class ManagerTeamLeaddriver {
+
+	public static void main(String[] args) {
+		EntityManager em = Persistence.createEntityManagerFactory("bm").createEntityManager();
+		EntityTransaction et = em.getTransaction();
+		
+		Manager m = new Manager();
+		m.setId(110);
+		m.setName("Virat");
+		m.setSalary(234314.0);
+		
+		Manager m1 = new Manager();
+		m.setId(111);
+		m.setName("Rohit");
+		m.setSalary(23414.0);
+		
+		Manager m2 = new Manager();
+		m.setId(112);
+		m.setName("Vishaka");
+		m.setSalary(2300.0);
+		
+		TeamLead tl = new TeamLead();
+		tl.setId(10);
+		tl.setName("Arun");
+		tl.setSkill("java");
+		tl.setSalary(1324.0);
+		
+		TeamLead tl1 = new TeamLead();
+		tl1.setId(11);
+		tl1.setName("Aditya");
+		tl1.setSkill("python");
+		tl1.setSalary(13224.0);
+		
+		TeamLead tl2 = new TeamLead();
+		tl2.setId(12);
+		tl2.setName("Ajay");
+		tl2.setSkill("javaScript");
+		tl2.setSalary(13274.0);
+		
+		List<TeamLead> tList=Arrays.asList(tl,tl1,tl2);
+		m.setTeamLead(tList);
+		
+		List<Manager> mList=Arrays.asList(m,m1,m2);
+		
+		et.begin();
+		
+		em.persist(m);
+		et.commit();
+		
+		
+	}
+}

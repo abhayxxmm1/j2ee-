@@ -1,0 +1,29 @@
+package hibernate;
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Id;
+import javax.persistence.Persistence;
+
+
+public class Entity_Hibernate {
+
+	public static void main(String[] args) {
+		
+	EntityManagerFactory emf= Persistence.createEntityManagerFactory("dev");
+	
+//	EntityManager emt= emf.createEntityManager("Enti");
+//	
+//	System.out.println("Table created succesfully");
+//	emt.close();
+//	emf.close();
+		
+	}
+
+	
+
+	
+}

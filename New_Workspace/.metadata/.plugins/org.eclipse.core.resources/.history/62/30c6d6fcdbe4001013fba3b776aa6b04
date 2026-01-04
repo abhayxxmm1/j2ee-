@@ -1,0 +1,26 @@
+package com.jsp.designPattern.entity;
+
+public interface Parent {
+
+//	static {
+//		
+//	}
+	
+//	{
+//		
+//	}
+	
+	public static final int a = 20;
+	
+	void nonStatic();
+	
+	//	void static(); 
+	default void isStatic() {
+		System.out.println("concreate static is allowed");
+	}
+	
+	public static void main(String[] args) {
+		System.err.println("We can pass main method here");
+	}
+	
+}

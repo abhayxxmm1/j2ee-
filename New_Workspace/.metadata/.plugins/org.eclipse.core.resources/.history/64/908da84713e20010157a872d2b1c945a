@@ -1,0 +1,33 @@
+package com.jsp.hql.driver;
+
+import java.util.Scanner;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+
+public class MobileDriverPositionParameter {
+
+	public static void main(String[] args) {
+		EntityManager em = Persistence.createEntityManagerFactory("pg").createEntityManager();
+		
+		EntityTransaction et = em.getTransaction();
+		
+		Scanner sc = new Scanner(System.in);
+		
+		et.begin();
+		Query query4 = em.createQuery("update Mobile e set e.name=?2 where e.id=?1");
+		
+		System.out.println("Enter id : ");
+		int updateId = sc.nextInt();
+		System.out.println("Enter name to update : ");
+		String updateName = sc.next();
+		
+		query4.setParameter(1, updateId);
+		query4.setParameter(2, updateName);
+		System.out.println("Updated");
+		et.commit();
+		
+	}
+}

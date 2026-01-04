@@ -1,0 +1,41 @@
+package com.jsp.hql.driver;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+
+import com.jsp.hql.entity.Mobile;
+
+public class MobileDriver {
+
+	public static void main(String[] args) {
+		
+		EntityManager em = Persistence.createEntityManagerFactory("pg").createEntityManager();
+		
+		EntityTransaction et = em.getTransaction();
+		
+//		Mobile m1 = new Mobile(101, "Vivo", 29999.0);
+//		Mobile m2 = new Mobile(102, "oppo", 17999.0);
+//		Mobile m3 = new Mobile(103, "redmi", 38999.0);
+//		
+//		et.begin();
+//		em.persist(m1);
+//		em.persist(m2);
+//		em.persist(m3);
+//		et.commit();
+		
+//		Query query = em.createQuery("from Mobile");
+//		List<Mobile> list= query.getResultList();
+//		list.forEach(System.out::println);
+		
+		Query query2 = em.createQuery("from Mobile e where e.id=101");
+		Object singleResult = query2.getSingleResult();
+		System.out.println(singleResult);
+		
+		
+		
+	}
+}

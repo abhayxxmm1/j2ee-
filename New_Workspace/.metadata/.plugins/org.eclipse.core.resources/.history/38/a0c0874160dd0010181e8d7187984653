@@ -1,0 +1,73 @@
+package com.jsp.bimapManyToMany1.driver;
+
+import java.util.Arrays;
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+import com.jsp.bimapManyToMany1.entity.Course;
+import com.jsp.bimapManyToMany1.entity.Students;
+
+public class StudentCourseDriver {
+
+	public static void main(String[] args) {
+		
+		EntityManager em = Persistence.createEntityManagerFactory("bm").createEntityManager();
+		EntityTransaction et = em.getTransaction();
+
+		Course c1 = new Course();
+		c1.setId(201);
+		c1.setName("Java");
+		c1.setFees(15000);
+		c1.setDuration(8);
+
+		Course c2 = new Course();
+		c2.setId(202);
+		c2.setName("J2ee");
+		c2.setFees(15000);
+		c2.setDuration(3);
+		
+		Course c3 = new Course();
+		c3.setId(203);
+		c3.setName("SQL");
+		c3.setFees(5000);
+		c3.setDuration(2);
+		
+		List<Course> courses1=Arrays.asList(c1, c2);
+		List<Course> courses2=Arrays.asList(c1, c3);
+		List<Course> courses3=Arrays.asList(c1, c2,c3);
+		
+		
+		
+		Students s1 = new Students();
+		s1.setId(101);
+		s1.setName("Nikhil");
+		s1.setAge(20);
+
+		Students s2 = new Students();
+		s2.setId(102);
+		s2.setName("laxhmi");
+		s2.setAge(22);
+		
+		Students s3 = new Students();
+		s3.setId(103);
+		s3.setName("Anjali");
+		s3.setAge(21);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		et.begin();
+		
+		et.commit();
+		
+	}
+}

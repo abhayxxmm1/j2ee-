@@ -1,0 +1,5 @@
+package com.jsp.unimapOneToMany2.entity;
+
+public class Anime {
+
+}
