@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="/Users/abhayghongade/New_Workspace/hql/src/main/java/com/jsp/hql/driver/MobileDriver.java"/>
+			<item value="/Users/abhayghongade/New_Workspace/bimapOneToMany/src/main/java/com/jsp/bimapOneToMany/driver/ManagerTeamLeaddriver.java"/>
+			<item value="/Users/abhayghongade/New_Workspace/unimapManyToOne2/src/main/java/com/jsp/unimapManyToOne2/driver/UnionTerritoriesIndiaDriver.java"/>
+			<item value="/Users/abhayghongade/New_Workspace/unimapManyToOne/src/main/java/com/jsp/unimapManyToOne/driver/StateDistrictDriver.java"/>
+			<item value="/Users/abhayghongade/Documents/GitHub/j2ee-"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="All Catalogs"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+		</list>
+		<list key="groupId">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+			<item value="com.jsp"/>
+			<item value="com.qsp"/>
+		</list>
+		<list key="name">
+			<item value="unimapManyToOne2"/>
+			<item value="unimap1"/>
+			<item value="unimap"/>
+		</list>
+		<list key="artifactId">
+			<item value="designPattern"/>
+			<item value="hqlAssignment"/>
+			<item value="bimapManyToMany"/>
+			<item value="bimapOneToMany"/>
+			<item value="bimap"/>
+			<item value="unimapWithCascading2"/>
+			<item value="unimapWithCascading"/>
+			<item value="unimapManyToMany2"/>
+			<item value="unimapManyToOne2"/>
+			<item value="unimapOneToMany3"/>
+			<item value="unimap3"/>
+			<item value="unimapManyToMany"/>
+			<item value="unimapManyToOne"/>
+			<item value="unimapOneToMany"/>
+			<item value="unimap2"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.wizards.CustomArchetypeDialog">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>

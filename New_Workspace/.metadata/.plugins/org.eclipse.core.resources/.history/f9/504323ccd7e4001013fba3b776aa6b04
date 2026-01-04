@@ -1,0 +1,14 @@
+package com.jsp.designPattern.driver;
+
+import com.jsp.designPattern.entity.Student;
+
+public class StudentDriverEarlyInstanciation {
+
+	public static void main(String[] args) {
+		Student s1=Student.getObj();
+		Student s2 = Student.getObj();
+		
+		System.out.println(s1);
+		System.out.println(s2);
+	}
+}

@@ -1,0 +1,4 @@
+127.0.0.1 - - [03/Dec/2025:21:20:06 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [03/Dec/2025:21:20:07 +0530] "GET /Registration_Login/login.jsp HTTP/1.1" 200 406
+0:0:0:0:0:0:0:1 - - [03/Dec/2025:21:20:07 +0530] "GET /favicon.ico HTTP/1.1" 404 763
+0:0:0:0:0:0:0:1 - - [03/Dec/2025:21:20:25 +0530] "GET /Registration_Login/handleLogin.jsp?u=XY&p=123 HTTP/1.1" 200 155

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app
+    version="4.0"
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                        http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+
+  <display-name>Archetype Created Web Application</display-name>
+
+  <!-- ************  MyServlet ************* -->
+  <servlet>
+    <servlet-name>MyServlet</servlet-name>
+    <servlet-class>com.qsp.MyServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MyServlet</servlet-name>
+    <url-pattern>/hi</url-pattern>
+  </servlet-mapping>
+
+  <!--
+    Example Register servlet (commented out)
+    <servlet>...</servlet>
+  -->
+
+  <!-- ************ ServletContext ************* -->
+  <!-- 1 Context for 1 webApplication -->
+  <context-param>
+    <param-name>user</param-name>
+    <param-value>postgres</param-value>
+  </context-param>
+  <context-param>
+    <param-name>pass</param-name>
+    <param-value>root</param-value>
+  </context-param>
+
+  <!-- ************ ServletConfig ************* -->
+  <!-- used to give the info to 1 config to 1 servlet -->
+  <servlet>
+    <servlet-name>Pandya</servlet-name>
+    <servlet-class>com.qsp.ContextConfig.PandyaServelet</servlet-class>
+    <init-param>
+      <param-name>wife</param-name>
+      <param-value>null</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Pandya</servlet-name>
+    <url-pattern>/Pandya</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Virat</servlet-name>
+    <servlet-class>com.qsp.ContextConfig.ViratServelet</servlet-class>
+    <init-param>
+      <param-name>wife</param-name>
+      <param-value>Anuska</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Virat</servlet-name>
+    <url-pattern>/Virat</url-pattern>
+  </servlet-mapping>
+
+	<welcome-file-list>
+    	<welcome-file>Registration.html</welcome-file>
+    </welcome-file-list>
+</web-app>

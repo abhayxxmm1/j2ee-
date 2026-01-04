@@ -1,0 +1,127 @@
+package rating;
+
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Scanner;
+
+public class Product {
+
+
+
+	private static String URL  = "jdbc:postgresql://localhost:5433/jsp";
+	private static String UN  = "postgres";
+	private static String Pass  = "root";
+	private static Connection con;
+	private static Scanner sc = new Scanner(System.in);
+	
+	static {
+		
+		try {
+			/// avoid using Connection because its already declared else we get NullPointerException
+			Class.forName("org.postgresql.Driver");	 
+			con = DriverManager.getConnection(URL,UN,Pass);
+			
+			
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public static void main(String[] args) {
+		insertProduct();
+//		deleteProduct();
+		
+//		updateProductPrice();
+		
+		
+	}
+	public static void insertProduct(){
+		
+		try {
+			PreparedStatement ps =con.prepareStatement("insert into product values(?,?,?)");
+			System.out.println("enter the id");
+			ps.setInt(1, sc.nextInt());
+			
+			System.out.println("Enter Name");
+			ps.setString(2, sc.next());
+			
+
+			System.out.println("Enter Price");
+			ps.setDouble(3, sc.nextDouble());
+			
+			System.out.println("value inserted");
+			
+			ps.executeUpdate();
+			con.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	public static void updateProductPrice() {
+		try {
+			// 3rd step
+			PreparedStatement ps = con.prepareStatement("update product set id = ? where name = ?");
+			System.out.println("Enter the Id");
+			ps.setInt(1, sc.nextInt());
+			System.out.println("Enter the Name");
+			ps.setString(2, sc.next());
+			
+			// 4th step
+			ps.execute();
+			
+			System.out.println("Updated");
+			con.close();
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+		}
+	}
+	public static void deleteProduct() {
+		try {
+			// 3rd step
+			PreparedStatement ps = con.prepareStatement("delete from product where id = ?");
+			System.out.println("Enter the Id");
+			ps.setInt(1, sc.nextInt());
+			
+			// 4th step
+			ps.executeUpdate();
+
+			
+			System.out.println("Deleted");
+			con.close();
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+		}
+	}
+	public static void findById() {
+		
+	}
+	public static void findByPrice() {
+		
+	}
+	public static void findAll() {
+		try {
+			Statement stm = con.createStatement();
+			ResultSet rs = stm.executeQuery("select * from product");
+			while (rs.next()) {
+				System.out.println(rs.getInt("id")+" "+rs.getString("name"));
+			}
+			
+			
+			System.out.println("executed");
+			
+			con.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

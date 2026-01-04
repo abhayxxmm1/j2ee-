@@ -1,0 +1,4 @@
+127.0.0.1 - - [12/Dec/2025:07:29:20 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [12/Dec/2025:07:29:20 +0530] "GET /Registration_Login/ HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [12/Dec/2025:07:29:20 +0530] "GET /Registration_Login/Registration.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [12/Dec/2025:07:29:21 +0530] "GET /favicon.ico HTTP/1.1" 404 763

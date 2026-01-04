@@ -1,0 +1,15 @@
+content_assist_autoactivation_triggers_java=abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+content_assist_autoactivation_triggers_javadoc=abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+content_assist_disabled_computers=org.eclipse.jdt.ui.textProposalCategory\u0000org.eclipse.jdt.ui.javaPostfixProposalCategory\u0000org.eclipse.jdt.ui.javaAllProposalCategory\u0000org.eclipse.jdt.ui.javaTypeProposalCategory\u0000org.eclipse.jdt.ui.javaNoTypeProposalCategory\u0000org.eclipse.jdt.ui.javaChainProposalCategory\u0000
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="com.qsp.unimap.Adhar"><rhs name\="com.qsp.unimap.Adhar"/></lhs><lhs name\="java.lang.reflect.GenericDeclaration"><rhs name\="java.lang.Class"/></lhs><lhs name\="java.lang.reflect.AnnotatedElement"><rhs name\="java.lang.Class"/></lhs><lhs name\="java.lang.reflect.Type"><rhs name\="java.lang.Class"/></lhs><lhs name\="com.jsp.unimap1.Employee"><rhs name\="com.jsp.unimap1.Employee"/></lhs><lhs name\="com.jsp.unimap1.PanCard"><rhs name\="com.jsp.unimap1.PanCard"/></lhs><lhs name\="com.jsp.unimap2.Country"><rhs name\="com.jsp.unimap2.Country"/></lhs><lhs name\="com.jsp.unimap2.Pm"><rhs name\="com.jsp.unimap2.Pm"/></lhs><lhs name\="com.jsp.unimap3.entity.Person"><rhs name\="com.jsp.unimap3.entity.Person"/></lhs><lhs name\="java.lang.Enum"><rhs name\="org.hibernate.annotations.CascadeType"/><rhs name\="javax.persistence.CascadeType"/></lhs><lhs name\="com.jsp.unimapWithCascading.entity.Doctors"><rhs name\="com.jsp.unimapWithCascading.entity.Doctors"/></lhs><lhs name\="com.jsp.designPattern.entity.Student"><rhs name\="com.jsp.designPattern.entity.Student"/></lhs><lhs name\="com.jsp.designPattern.entity.Developer"><rhs name\="com.jsp.designPattern.entity.Developer"/></lhs></history>
+content_assist_number_of_computers=20
+content_assist_proposals_background=255,255,255
+content_assist_proposals_foreground=0,0,0
+eclipse.preferences.version=1
+org.eclipse.jdt.internal.ui.navigator.layout=2
+org.eclipse.jdt.internal.ui.navigator.librariesnode=true
+org.eclipse.jdt.ui.formatterprofiles.version=23
+spelling_locale_initialized=true
+typefilter_migrated_2=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

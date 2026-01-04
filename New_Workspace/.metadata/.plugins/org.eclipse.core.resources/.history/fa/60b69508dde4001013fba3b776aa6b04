@@ -1,0 +1,10 @@
+package com.jsp.designPattern.entity;
+
+public class SubClass implements Parent{
+
+	@Override
+	public void nonStatic() {
+		System.out.println(" betta kar diya ovveride dekh bkl");
+	}
+
+}

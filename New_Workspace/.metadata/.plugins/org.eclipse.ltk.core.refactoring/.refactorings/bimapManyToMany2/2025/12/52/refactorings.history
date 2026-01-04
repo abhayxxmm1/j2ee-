@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;bimapManyToMany2&apos; to &apos;com.jsp.bimapManyToMany2.entity&apos;&#x0A;- Original project: &apos;bimapManyToMany2&apos;&#x0A;- Original element: &apos;bimapManyToMany2/src/main/java/bimapManyToMany2&apos;&#x0A;- Renamed element: &apos;bimapManyToMany2/src/main/java/com.jsp.bimapManyToMany2.entity&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;bimapManyToMany2&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;bimapManyToMany2" name="com.jsp.bimapManyToMany2.entity" qualified="false" references="true" stamp="1766550581782" textual="false" version="1.0"/>
+</session>
