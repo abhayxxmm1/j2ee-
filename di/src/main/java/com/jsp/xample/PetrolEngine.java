@@ -2,7 +2,7 @@ package com.jsp.xample;
 
 import org.springframework.stereotype.Component;
 
-@Component
+@Component(value = "petrol")
 public class PetrolEngine implements Engine{
 
 	public void start()

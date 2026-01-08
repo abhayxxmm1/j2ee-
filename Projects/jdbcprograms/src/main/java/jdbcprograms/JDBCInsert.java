@@ -12,10 +12,10 @@ public class JDBCInsert {
 		try {
 			
 			Class.forName("org.postgresql.Driver");
-			Connection c=DriverManager.getConnection("jdbc:postgresql://localhost:5432/QSP","postgres","root");
+			Connection c=DriverManager.getConnection("jdbc:postgresql://localhost:5432/scott","postgres","root");
 			Statement s=c.createStatement();
 			for (int i = 0; i < 100; i++) {
-				b=s.execute("insert into student values(11,'Amit')");
+				b=s.execute("insert into student values(17,'Abhay')");
 			}
 			
 			System.out.println(b);

@@ -9,8 +9,9 @@ public class Driver {
 
 	public static void main(String[] args) {
 		
-		ApplicationContext ac=new AnnotationConfigApplicationContext(myConfig.class);
+		ApplicationContext ac=new AnnotationConfigApplicationContext(MyConfig.class);
 		Mobile mobile=ac.getBean(Mobile.class);
 		mobile.call("Jio");
+		mobile.call("Airtel");
 	}
 }

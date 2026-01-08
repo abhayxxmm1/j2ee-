@@ -6,6 +6,6 @@ import org.springframework.stereotype.Component;
 public class Sim {
 
 	public void active(String name) {
-		System.out.println(name+" sim in activated...");
+		System.out.println(name+ " sim in activated...");
 	}
 }
