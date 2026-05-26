@@ -1,3 +1,28 @@
+# J2EE Practice Projects
+
+## Overview
+This repository contains multiple Java enterprise application practice projects using JDBC, Servlets, Hibernate, and JPA.
+
+## Technologies
+- Java
+- JDBC
+- Servlets
+- Hibernate
+- JPA
+- Maven
+- MySQL
+
+## Features
+- Database Connectivity
+- CRUD Operations
+- ORM Mapping
+- Servlet-Based Applications
+- Maven Project Management
+
+## Purpose
+This repository was created for practicing and understanding enterprise Java backend development concepts.
+
+
 # JAVA INTERVIEW REVISION NOTES
 
 ---
