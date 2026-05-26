@@ -1,27 +1,301 @@
-# J2EE Practice Projects
+# Java Backend Development Practice Repository
 
 ## Overview
-This repository contains multiple Java enterprise application practice projects using JDBC, Servlets, Hibernate, and JPA.
 
-## Technologies
+This repository contains Java backend development projects and practice programs focused on:
+
+- JDBC
+- Hibernate
+- Spring Core
+- Dependency Injection
+- Design Patterns
+- Servlet Development
+- HQL (Hibernate Query Language)
+- Entity Relationships
+- Caching
+- Registration & Login Systems
+
+The repository was created as a personal learning workspace to strengthen Java enterprise development and backend architecture concepts.
+
+---
+
+# Topics Covered
+
+# 1. JDBC (Java Database Connectivity)
+
+Programs demonstrating database interaction using JDBC.
+
+## Topics Covered
+
+- Database Connection
+- Execute Methods
+- Execute Update
+- Execute Query
+- Batch Processing
+- Prepared Statements
+- Callable Statements
+
+### Example Files
+
+- `A_explicitRegistration.java`
+- `A1_execute.java`
+- `A2_executeUpdate.java`
+- `A3_executeQuery.java`
+- `A4_addBatch.java`
+- `A5_prepareStatement.java`
+- `A6_collableStatement.java`
+
+### Folder
+
+- `X.JDBC`
+
+---
+
+# 2. Hibernate ORM
+
+Projects focused on Hibernate framework and ORM concepts.
+
+## Topics Covered
+
+- Hibernate Configuration
+- CRUD Operations
+- Object Relational Mapping
+- Entity Persistence
+
+### Folders
+
+- `hibernate`
+- `TransientHibernate`
+
+---
+
+# 3. Hibernate Relationships Mapping
+
+Understanding entity relationships in Hibernate.
+
+## Topics Covered
+
+- Unidirectional Mapping
+- Bidirectional Mapping
+- One-To-One
+- One-To-Many
+- Many-To-One
+- Many-To-Many
+- Cascading
+
+---
+
+## Bidirectional Mapping
+
+### Folders
+
+- `bimap`
+- `bimap1`
+- `bimapManyToMany`
+- `bimapManyToMany1`
+- `bimapManyToMany2`
+- `bimapOneToMany`
+
+---
+
+## Unidirectional Mapping
+
+### Folders
+
+- `unimap`
+- `unimap1`
+- `unimap2`
+- `unimap3`
+- `unimapManyToMany`
+- `unimapManyToMany2`
+- `unimapManyToOne`
+- `unimapManyToOne2`
+- `unimapOneToMany`
+- `unimapOneToMany1`
+- `unimapOneToMany2`
+- `unimapOneToMany3`
+- `unimapWithCascading`
+- `unimapWithCascading2`
+
+---
+
+# 4. Composite Keys
+
+Implementation of composite primary keys in Hibernate.
+
+### Folder
+
+- `compositeKey`
+
+---
+
+# 5. Hibernate Query Language (HQL)
+
+Projects demonstrating advanced querying using HQL.
+
+## Topics Covered
+
+- HQL Queries
+- Dynamic Queries
+- Database Manipulation
+
+### Folders
+
+- `hql`
+- `hqlDms`
+
+---
+
+# 6. Hibernate Caching
+
+Understanding caching mechanisms in Hibernate.
+
+## Topics Covered
+
+- First Level Cache
+- Second Level Cache
+- EhCache Integration
+
+### Folder
+
+- `Hibernate_EhCahce`
+
+---
+
+# 7. Spring Core
+
+Learning Spring Core framework concepts.
+
+## Topics Covered
+
+- Dependency Injection
+- ApplicationContext
+- BeanFactory
+- XML Configuration
+
+### Folders
+
+- `springcoreAppContext`
+- `springCoreXmlBeanFactory`
+- `di`
+
+---
+
+# 8. Design Patterns
+
+Implementation of software design patterns in Java.
+
+### Folder
+
+- `designPattern`
+
+---
+
+# 9. Servlet Projects
+
+Backend web application development using Servlets.
+
+### Folder
+
+- `servelet-project`
+
+---
+
+# 10. Registration & Login Systems
+
+Authentication and user management projects.
+
+### Folders
+
+- `Registration_Login`
+- `Registration_Login2`
+
+---
+
+# 11. Project & Server Configuration
+
+Workspace and server configuration files.
+
+### Folders
+
+- `Servers`
+- `Projects`
+- `New_Workspace`
+
+---
+
+# Technologies Used
+
 - Java
 - JDBC
+- Hibernate ORM
+- Spring Core
 - Servlets
-- Hibernate
-- JPA
-- Maven
-- MySQL
+- HQL
+- MySQL / Relational Databases
+- EhCache
 
-## Features
-- Database Connectivity
-- CRUD Operations
-- ORM Mapping
-- Servlet-Based Applications
-- Maven Project Management
+---
 
-## Purpose
-This repository was created for practicing and understanding enterprise Java backend development concepts.
+# Purpose of Repository
 
+This repository is intended for:
+
+- Backend Java practice
+- Enterprise application learning
+- ORM understanding
+- Database interaction practice
+- Spring framework learning
+- Java interview preparation
+
+---
+
+# Learning Outcomes
+
+After completing these projects, you will understand:
+
+- JDBC database operations
+- Hibernate ORM mappings
+- Entity relationships
+- HQL querying
+- Dependency Injection
+- Spring Core configuration
+- Servlet-based web applications
+- Enterprise backend architecture concepts
+
+---
+
+# Repository Structure
+
+```bash
+designPattern
+di
+hibernate
+Hibernate_EhCahce
+hql
+hqlDms
+Registration_Login
+servelet-project
+springcoreAppContext
+springCoreXmlBeanFactory
+TransientHibernate
+X.JDBC
+bimap
+unimap
+compositeKey
+```
+
+---
+
+# Additional Notes
+
+- Covers enterprise Java backend concepts.
+- Includes ORM relationship mapping examples.
+- Demonstrates Spring and Hibernate integration concepts.
+- Useful for backend interview preparation and Java EE learning.
+
+---
+Java Backend Development & Enterprise Java Practice Repository
 
 # JAVA INTERVIEW REVISION NOTES
 
